@@ -1,3 +1,5 @@
+import config.Database;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -21,11 +23,12 @@ public class jdbc {
         Statement stmt = null;
         ResultSet rs = null;
         try {
-            //STEP 2: Register JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = Database.getConnection();
+//            //STEP 2: Register JDBC driver
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            //STEP 3: Open a connection
+//            System.out.println("Connecting to database...");
+//            conn = DriverManager.getConnection(DB_URL, USER, PASS);
             //STEP 4: Execute a query
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
