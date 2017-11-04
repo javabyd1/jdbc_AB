@@ -15,7 +15,7 @@ public class Database {
     private final static String USER = "root";
     private final static String PASSWORD = "root";
     private final static String PORT = "8889";
-    private final static String DRIVER = "com.mysql.jdbc.Driver";
+    private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
 
 
     private static void loadDriver() {
